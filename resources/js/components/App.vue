@@ -11,22 +11,8 @@
 </template>
 
 <script>
-    import { mapActions, mapState } from 'vuex';
     export default {
-        name: "app",
-        watch: {
-            auth(value) {
-                if (value) {
-                    this.getUserInfo();
-                }
-            }
-        },
-        computed: {
-            ...mapState('auth', ['auth'])
-        },
-        methods: {
-            ...mapActions('auth', ['getUserInfo'])
-        }
+        name: "app"
     }
 </script>
 

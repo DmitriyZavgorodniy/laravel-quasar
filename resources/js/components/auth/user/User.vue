@@ -1,6 +1,6 @@
 <template>
     <q-page>
-        <h1>{{ $t('welcome.greetings') }} {{ userInfo.username }}</h1>
+        <h1>{{ $t('welcome.greetings') + " guest" }}</h1>
     </q-page>
 </template>
 
@@ -8,9 +8,6 @@
     import { mapGetters} from 'vuex'
     export default {
         name: "user",
-        computed: {
-            ...mapGetters('auth', ['userInfo'])
-        },
     }
 </script>
 

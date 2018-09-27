@@ -85,8 +85,8 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'client.grants' => \App\Http\Middleware\VerifyGrantType::class,
-        'client.details' => \App\Http\Middleware\InjectClientDetails::class,
-        'client.oauth' => \App\Http\Middleware\InjectAuthToken::class,
+        //'client.grants' => \App\Http\Middleware\VerifyGrantType::class,
+        //'client.details' => \App\Http\Middleware\InjectClientDetails::class,
+        //'client.oauth' => \App\Http\Middleware\InjectAuthToken::class,
     ];
 }

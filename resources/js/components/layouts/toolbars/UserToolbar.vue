@@ -10,52 +10,20 @@
                    label="Go to Welcome"
                    @click="$router.replace({name: 'public.index'})">
             </q-btn>
-            <q-btn v-if="!isAuth"
-                   flat
+            <q-btn flat
                    dense
-                   label="Log in"
-                   @click="showLogin(true)">
-            </q-btn>
-            <q-btn v-else
-                   flat dense
-                   :label="userInfo.username">
-            </q-btn>
-            <q-btn v-if="!isAuth"
-                   flat
-                   dense
-                   label="Sign in"
-                   @click="showRegister(true)">
-            </q-btn>
-            <q-btn v-else
-                   flat
-                   dense
-                   label="Sign out"
-                   @click="logout()">
+                   label="Guest">
             </q-btn>
         </q-toolbar>
-
-        <login></login>
-        <register></register>
     </div>
 </template>
 
 <script>
-    import Login from '../../auth/Login';
-    import Register from '../../auth/Register';
-    import { mapActions, mapGetters} from 'vuex';
     import LangManager from "../LangManager";
     export default {
         name: 'user-toolbar',
         components: {
-            LangManager,
-            Login,
-            Register
+            LangManager
         },
-        computed: {
-            ...mapGetters('auth', ['isAuth', 'userInfo']),
-        },
-        methods: {
-            ...mapActions('auth', ['showRegister', 'showLogin', 'logout'])
-        }
     }
 </script>

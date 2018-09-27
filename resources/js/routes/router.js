@@ -1,5 +1,5 @@
 import VueRouter from 'vue-router';
-import { AuthManager } from './auth-manager';
+//import { AuthManager } from './auth-manager';
 
 import * as All from "./external-import/external-files";
 
@@ -18,10 +18,7 @@ const router =  new VueRouter({
                     name: 'public.index',
                     component: All.Welcome
                 }
-            ],
-            beforeEnter (to, from, next) {
-                AuthManager.optionalAuth(to, from, next);
-            }
+            ]
         },
         {
             path: '/user',
@@ -36,10 +33,7 @@ const router =  new VueRouter({
                     name: 'user.index',
                     component: All.User
                 }
-            ],
-            beforeEnter (to, from, next) {
-                AuthManager.forceAuth(to, from, next);
-            }
+            ]
         },
         {
             path: '/e404',
@@ -54,10 +48,7 @@ const router =  new VueRouter({
                     name: 'e404',
                     component: All.NotFound
                 }
-            ],
-            beforeEnter (to, from, next) {
-                AuthManager.optionalAuth(to, from, next);
-            }
+            ]
         },
         {
             path: '*',

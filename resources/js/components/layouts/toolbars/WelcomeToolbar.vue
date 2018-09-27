@@ -10,54 +10,21 @@
                    label="See 404"
                    @click="$router.replace({name: 'e404'})">
             </q-btn>
-            <q-btn v-if="!isAuth"
-                   flat
+            <q-btn flat
                    dense
-                   label="Log in"
-                   @click="showLogin(true)">
-            </q-btn>
-            <q-btn v-else
-                   flat
-                   dense
-                   :label="userInfo.username"
+                   label="Guest"
                    @click="$router.replace({name: 'user.index'})">
             </q-btn>
-            <q-btn v-if="!isAuth"
-                   flat
-                   dense
-                   label="Sign in"
-                   @click="showRegister(true)">
-            </q-btn>
-            <q-btn v-else
-                   flat
-                   dense
-                   label="Sign out"
-                   @click="logout()">
-            </q-btn>
         </q-toolbar>
-
-        <login></login>
-        <register></register>
     </div>
 </template>
 
 <script>
-    import Login from '../../auth/Login';
-    import Register from '../../auth/Register';
-    import { mapActions, mapGetters} from 'vuex';
     import LangManager from "../LangManager";
     export default {
         name: 'welcome-toolbar',
         components: {
-            LangManager,
-            Login,
-            Register
+            LangManager
         },
-        computed: {
-            ...mapGetters('auth', ['isAuth', 'userInfo']),
-        },
-        methods: {
-            ...mapActions('auth', ['showRegister', 'showLogin', 'logout'])
-        }
     }
 </script>
