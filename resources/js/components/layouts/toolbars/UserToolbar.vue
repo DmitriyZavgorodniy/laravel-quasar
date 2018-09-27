@@ -24,6 +24,6 @@
         name: 'user-toolbar',
         components: {
             LangManager
-        },
+        }
     }
 </script>

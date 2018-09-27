@@ -25,6 +25,6 @@
         name: 'welcome-toolbar',
         components: {
             LangManager
-        },
+        }
     }
 </script>
