@@ -9,11 +9,15 @@ Ejecuta los siguientes comandos:
 3. cp .env.example .env
 4. php artisan key:generate
 5. php artisan migrate
+
+-- inicio (opcional)
 6. php artisan passport:install
 
 Copia los tokens generados (Password grant client) y agrega/actualiza las siguientes llaves en tu archivo .env:\
  PASSWORD_CLIENT_ID \
  PASSWORD_CLIENT_SECRET
+ 
+ -- fin (opcional)
 
 Ejecuta:\
 npm run watch\
@@ -140,11 +144,16 @@ Execute the following commands:
 3. cp .env.example .env
 4. php artisan key:generate
 5. php artisan migrate
+
+-- start (optional)
+
 6. php artisan passport:install
 
 Copy the generated tokens (Password grant client) and add/update the following keys in your .env file:\
  PASSWORD_CLIENT_ID \
  PASSWORD_CLIENT_SECRET
+ 
+ -- end (optional)
  
 Execute:\
 npm run watch\
